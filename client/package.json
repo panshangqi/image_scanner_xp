@@ -1,0 +1,30 @@
+{
+  "name": "image_scanner_xp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./image_scanner.nw/index.js",
+  "node-main":"./image_scanner.nw/main.js",
+  "scripts": {
+    "start": "nw.exe image_scanner.nw --enable-logging=stderr -v=0",
+    "build": "node ./script/build.js",
+    "merge": "copy /b nw.exe+image_scanner.nw image_scanner.exe",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "window": {
+    "width": 1024,
+    "height": 450
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panshangqi/image_scanner_xp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/panshangqi/image_scanner_xp/issues"
+  },
+  "homepage": "https://github.com/panshangqi/image_scanner_xp#readme",
+  "dependencies": {
+    "child_process": "^1.0.2"
+  }
+}
