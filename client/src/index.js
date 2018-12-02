@@ -1,0 +1,2 @@
+
+process.mainModule.exports.init();

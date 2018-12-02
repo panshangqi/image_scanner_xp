@@ -4,11 +4,20 @@ var path = require('path')
 var project_root = path.resolve(__dirname,'../../');
 console.log(project_root);
 var src_dir = path.join(project_root, 'client')
+var build_dir = path.join(project_root, 'build')
 var package_dir = path.join(project_root, 'build/win-xp-ia32')
 
-deleteFolder(package_dir,function (p) {
-    console.log('delete' + p)
-})
+if(fs.existsSync(package_dir)){
+	deleteFolder(package_dir,function (p) {
+		console.log('delete' + p)
+	})
+}
+if(!fs.existsSync(build_dir)){
+	fs.mkdirSync(build_dir);
+}
+if(!fs.existsSync(package_dir)){
+	fs.mkdirSync(package_dir);
+}
 console.log('clean complete')
 console.log('copy' + src_dir + '==>' + package_dir)
 copyDir(src_dir, package_dir, function (a,b) {

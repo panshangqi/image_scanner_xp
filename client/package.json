@@ -2,18 +2,13 @@
   "name": "image_scanner_xp",
   "version": "1.0.0",
   "description": "",
-  "main": "./image_scanner.nw/index.js",
-  "node-main": "./image_scanner.nw/main.js",
   "scripts": {
-    "start": "nw.exe image_scanner.nw --enable-logging=stderr -v=0",
-    "build": "node ./script/build.js",
+    "start": "nwjs-sdk-v0.14.7-win-ia32\\nw.exe src --enable-logging=stderr --v=0 --user-data-dir=%APPDATA%\\image_scanner_xp",
+    "prod": "node ./script/build.js",
+    "build": "nwbuild --platforms win32 --version 0.14.7 --name image_scanner --winIco src/res/logo.ico src/",
     "merge": "copy /b nw.exe+image_scanner.nw image_scanner.exe",
     "nsis": "electron-builder --win --ia32 --pd=../build/win-xp-ia32",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "window": {
-    "width": 1024,
-    "height": 450
   },
   "repository": {
     "type": "git",
@@ -26,9 +21,12 @@
   },
   "homepage": "https://github.com/panshangqi/image_scanner_xp#readme",
   "dependencies": {
+    "ali-oss": "^6.0.1",
     "child_process": "^1.0.2"
   },
   "devDependencies": {
-    "electron-builder": "^20.38.2"
+    "electron-builder": "^20.38.2",
+    "nw-builder": "^3.5.4",
+    "winresourcer": "^0.9.0"
   }
 }

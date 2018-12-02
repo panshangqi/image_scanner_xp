@@ -1,5 +1,7 @@
 build/
-client/node_modules
+client/build/
+client/node_modules/
+client/nwjs-sdk-v0.14.7-win-ia32/
 
 
 
