@@ -10,7 +10,7 @@
     "java": false,
     "page-cache": false
   },
-  "chromium-args":"",
+  "chromium-args":"--enable-logging",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,0 +1,16 @@
+{
+  "files": [
+	  "index.js",
+	  "main.cc",
+	  "package.json",
+	  "README.md",
+	  "test.js",
+	  "binding.gyp",
+	  "binding.gyp_32",
+	  "binding.gyp_64",
+	  "build.js",
+	  "bin32",
+	  "bin64",
+      "src"
+	]
+}

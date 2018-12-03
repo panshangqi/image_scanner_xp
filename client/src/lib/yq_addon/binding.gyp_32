@@ -1,0 +1,20 @@
+{
+    "targets": [
+        {
+            "target_name": "yq_addon",
+            "sources": [ "./main.cc" ],
+            "include_dirs": [
+                    "<(module_root_dir)/win32/include/libvc",
+                    "<(module_root_dir)/win32/include"
+                  ],
+
+            "libraries":[
+                  "<(module_root_dir)/win32/lib/libuv.lib"
+                  ],
+
+            "cflags!": [ "-fno-exceptions" ],
+            "cflags": [ "-std=c++11" ],
+            "cflags_cc!": [ "-fno-exceptions" ]
+        }
+    ]
+}

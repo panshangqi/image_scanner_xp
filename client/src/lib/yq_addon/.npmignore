@@ -1,0 +1,6 @@
+win32
+win64
+*.gyp
+main.cc
+src
+build

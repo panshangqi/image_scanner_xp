@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "nwjs-sdk-v0.14.7-win-ia32\\nw.exe src --enable-logging=stderr --v=0 --user-data-dir=%APPDATA%\\image_scanner_xp",
+    "start": "nwjs-sdk-v0.14.7-win-ia32\\nw.exe src --v=0 --user-data-dir=%APPDATA%\\image_scanner_xp",
     "prod": "node ./script/build.js",
     "build": "nwbuild --platforms win32 --version 0.14.7 --name image_scanner --winIco src/res/logo.ico src/",
     "merge": "copy /b nw.exe+image_scanner.nw image_scanner.exe",
