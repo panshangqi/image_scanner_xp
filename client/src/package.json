@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "node-main":"main.js",
+  "bg-script":"main.js",
   "nodejs": true,
   "webkit": {
     "plugin": true,
     "java": false,
     "page-cache": false
   },
-  "chromium-args":"--enable-logging",
+  "chromium-args":"",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
