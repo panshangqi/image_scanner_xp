@@ -12,6 +12,7 @@
 #include <thread>
 #include <cstdio>
 #include <map>
+#include "UnicodeUtf8.h"
 using namespace v8;
 #pragma warning(disable：4996)
 ////async
@@ -39,6 +40,7 @@ namespace GRF{
         }
         return 0;
     }
+
     __int64 GetFileSize(const char *file_path) {
 
         WIN32_FIND_DATAA data;
@@ -191,7 +193,8 @@ namespace GRF{
 
 
         String::Utf8Value srcPath(dir);
-        baton->dir = *srcPath;
+        char *src_path = Unicode::StringToUtf8(*srcPath);
+        baton->dir = src_path;
 
         Local<Value> cb = Local<Value>::Cast(args[1]);
         Local<Value> cb_p = Local<Value>::Cast(args[2]);

@@ -116,8 +116,8 @@ yqAddon.getFolderSizeAsync = function (options) {
     })
 }
 
-yqAddon.logger = {}
-yqAddon.logger.info = function(params){
+
+yqAddon.printf = function(params){
     addon.Printf(params);
 }
 

@@ -37,26 +37,27 @@ async function  run() {
         //     console.log(data)
         // })
         //
-        var result = yqAddon.copyFiles({src_dir: 'G:/17_addon_test_data/test_copy_src', dst_dir: 'G:\\17_addon_test_data/test_copy_dst', files: _files, rename: true},function (data) {
-
-            var se = new Date().getTime();
-            console.log(`times: ${se-st}`)
-            console.log(data)
-        },function (progress) {
-            console.log('>>>' + progress)
-        })
+        // var result = yqAddon.copyFiles({src_dir: 'G:/17_addon_test_data/test_copy_src', dst_dir: 'G:\\17_addon_test_data/test_copy_dst', files: _files, rename: true},function (data) {
+        //
+        //     var se = new Date().getTime();
+        //     console.log(`times: ${se-st}`)
+        //     console.log(data)
+        // },function (progress) {
+        //     console.log('>>>' + progress)
+        // })
 
         // console.log('>>>>>>>>>>>')
         // console.log(result)
     //yqAddon.cancelCopyFiles(result)
 
 
-    await yqAddon.getRootFilesAsync({dir: 'G:/17_addon_test_data/test_copy_src'},function(data){
+    var res=await yqAddon.getRootFilesAsync({dir: 'E:/17_addon_test_data/test_copy_src/文件图片'},function(data){
         console.log(data)
     })
+    console.log(res)
 
     // console.log(res)
-    // var res = await yqAddon.getDiskInfoAsync({dir: 'G:\\17_addon_test_data/test_copy_src'})
+    // var res = await yqAddon.getDiskInfoAsync({dir: 'E:\\17_addon_test_data/test_copy_src'})
     // console.log(res)
     //
     // var res = await yqAddon.getFolderSizeAsync({dir: 'G:\\17_addon_test_data/test_copy_src'})

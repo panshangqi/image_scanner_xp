@@ -3,17 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "bg-script":"main.js",
+  "bg-script": "main.js",
   "nodejs": true,
   "webkit": {
     "plugin": true,
     "java": false,
     "page-cache": false
   },
-  "chromium-args":"",
+  "chromium-args": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "window_file_class": "^1.0.16"
+  }
 }

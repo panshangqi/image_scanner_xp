@@ -1,6 +1,6 @@
 {
   "name": "window_file_class",
-  "version": "1.0.13",
+  "version": "1.0.15",
   "description": "1. 编译32 和 64 bit  node",
   "main": "index.js",
   "scripts": {

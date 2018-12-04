@@ -1,2 +1,2 @@
 
-process.mainModule.exports.init();
+//process.mainModule.exports.init();

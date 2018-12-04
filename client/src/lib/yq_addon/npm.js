@@ -16,7 +16,7 @@ async function run() {
 
     console.log(client_root)
     var yq_addon = `${client_root}/src/lib/yq_addon`
-    var node_modules = `${client_root}/node_modules`
+    var node_modules = `${client_root}/src/node_modules`
     var window_file_class = `${node_modules}/window_file_class`
     //创建文件夹
     var bin32_dir = `${window_file_class}/bin32`

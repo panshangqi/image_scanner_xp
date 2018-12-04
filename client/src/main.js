@@ -2,26 +2,28 @@ const sys = require('./deps/system')
 const path = require('path')
 const fs = require('fs')
 const yq_addon = require('window_file_class')
-const { logger } = yq_addon
+//const { logger } = yq_addon
 chrome.developerPrivate.openDevTools({
     renderViewId: -1,
     renderProcessId: -1,
     extensionId: chrome.runtime.id
 });
+console.log(chrome)
 process.on('uncaughtException', (err) => {
     console.error(err)
 });
 function main(win, gui) {
     var appdata = gui.App.dataPath
-    logger.info(appdata)
+    console.log(appdata)
     var execPath = path.dirname(process.execPath)
-    logger.info(execPath)
+    console.log(execPath)
     var cwdPath = process.cwd()
-    logger.info(cwdPath)
+    console.log(cwdPath)
 
     console.log('xxxxxxxxxxxx')
 
-    logger.info('******************************')
+    console.log('******************************')
+
 }
 var gui = window.require('nw.gui');  // Load native UI library.
 //var url = 'http://127.0.0.1:10032/templates/index.html'

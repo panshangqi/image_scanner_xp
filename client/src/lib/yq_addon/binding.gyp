@@ -2,7 +2,7 @@
     "targets": [
         {
             "target_name": "yq_addon",
-            "sources": [ "./main.cc"],
+            "sources": [ "./main.cc","./src/UnicodeUtf8.cpp"],
             "include_dirs": [
                     "<(module_root_dir)/win64/include/libvc",
                     "<(module_root_dir)/win64/include",

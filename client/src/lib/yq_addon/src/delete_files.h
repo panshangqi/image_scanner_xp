@@ -9,6 +9,7 @@
 #include <thread>
 #include <cstdio>
 #include <vector>
+#include "UnicodeUtf8.h"
 using namespace v8;
 
 ////async
@@ -100,8 +101,9 @@ namespace DF{
         for(int i=0;i<_len;i++){
             Local<String> dir = dirs_list->Get(i)->ToString();
             String::Utf8Value sDir(dir);
-            printf("%s\n", *sDir);
-            baton->dirs.push_back(*sDir);
+            char *ch_dir = Unicode::StringToUtf8(*sDir);
+            printf("%s\n", ch_dir);
+            baton->dirs.push_back(ch_dir);
         }
 
         Local<Array> files_list = Local<Array>::Cast(files);

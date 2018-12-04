@@ -8,7 +8,7 @@
 #include "./src/get_disk_info.h"
 #include "./src/get_folder_size.h"
 #include "./src/get_root_files_test.h"
-#include "./src/console_log.h"
+#include "./src/log.h"
 
 
 // 相当于在 exports 对象中添加 { hello: hello }
@@ -22,7 +22,7 @@ void init(Handle<Object> exports) {
   NODE_SET_METHOD(exports, "getDiskInfo", GDI::getDiskInfo);   // 参数 dir(string)
   NODE_SET_METHOD(exports, "getFolderSize", GFS::getFolderSize);   // 参数 dir(string)
 
-  NODE_SET_METHOD(exports, "Printf", Console::Printf);   // 参数 dir(string)
+  NODE_SET_METHOD(exports, "Printf", Log::Printf);   // 参数 printf(string)
 }
 
 // 将 export 对象暴露出去s

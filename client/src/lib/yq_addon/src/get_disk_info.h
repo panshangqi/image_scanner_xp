@@ -10,7 +10,7 @@
 #include <iostream>
 #include <thread>
 #include <cstdio>
-
+#include "UnicodeUtf8.h"
 using namespace v8;
 #pragma warning(disable：4996)
 ////async
@@ -111,7 +111,8 @@ namespace GDI{
 
 
         String::Utf8Value srcPath(dir);
-        baton->dir = *srcPath;
+        char *src_path = Unicode::StringToUtf8(*srcPath);
+        baton->dir = src_path;
 
         Local<Value> cb = Local<Value>::Cast(args[1]);
         if(!cb->IsFunction()){

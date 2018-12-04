@@ -9,6 +9,8 @@
 #include <thread>
 #include <cstdio>
 #include <map>
+#include <vector>
+#include "UnicodeUtf8.h"
 using namespace v8;
 
 ////async
@@ -323,8 +325,8 @@ namespace CF{
                 }
                 for(int i=0;i<2;i++){
                     baton[i] = new WorkBaton();
-                    baton[i]->src_dir = *srcPath;
-                    baton[i]->dst_dir = *dstPath;
+                    baton[i]->src_dir = Unicode::StringToUtf8(*srcPath);
+                    baton[i]->dst_dir = Unicode::StringToUtf8(*dstPath);
                     baton[i]->rename = rename;
                     baton[i]->work.data = baton[i];
                     baton[i]->files = _files[i];

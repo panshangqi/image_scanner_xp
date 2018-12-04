@@ -6,7 +6,7 @@ var addon = null;
 addon = require('./build/Release/yq_addon.node')
 
 if(!addon){
-    console.log('xxx')
+
     process.exit(-1)
 }
 var _files = [
@@ -39,7 +39,6 @@ var _files = [
 
 async function  run() {
     for(var i=0;i<1;i++){
-        /*
         var pid = addon.copyFiles({src_dir: 'G:/17_addon_test_data/test_copy_src', dst_dir: 'G:\\17_addon_test_data/test_copy_dst', files: _files, rename: true},function (data) {
 
             var se = new Date().getTime();
@@ -49,12 +48,12 @@ async function  run() {
         },function (cancel){
             console.log('isCancel: ' + cancel)
         })
-        */
-        addon.allocConsole(null)
         //await Sleep(100)
     }
 }
-run();
+//run();
+addon.Printf("正在创建库 D:\\ElectronProject\\image_scanner\\client\\src\\lib\\yq_addon\\build\\Release\\yq_addon.lib 和对象 D:\\ElectronProject\\image_scanner\\client\\src\\lib\\yq_addon\\build\\Re\n" +
+    "lease\\y");
 
 //addon.cancelCopyFiles(pid)
 /*

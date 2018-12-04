@@ -13,6 +13,7 @@
 
  再 build版本执行命令行可以再控制台打印debug日志：  image_scanner.exe --enable-logging=stderr
 
+4. 如果npm run build 无法下载包： nw-builder\cache\0.14.7-sdk\win32 把原exe复制到该文件夹下即可
 
 //项目目录结构
 image_scanner_xp  -->  client --> src --> package.json  // package包信息
