@@ -2,6 +2,7 @@ const sys = require('./deps/system')
 const path = require('path')
 const fs = require('fs')
 const yq_addon = require('window_file_class')
+var async = require('async');
 //const { logger } = yq_addon
 chrome.developerPrivate.openDevTools({
     renderViewId: -1,
@@ -12,7 +13,7 @@ console.log(chrome)
 process.on('uncaughtException', (err) => {
     console.error(err)
 });
-function main(win, gui) {
+async function main(win, gui) {
     var appdata = gui.App.dataPath
     console.log(appdata)
     var execPath = path.dirname(process.execPath)
@@ -23,20 +24,24 @@ function main(win, gui) {
     console.log('xxxxxxxxxxxx')
 
     console.log('******************************')
-
+    console.log(process.version)
 }
 var gui = window.require('nw.gui');  // Load native UI library.
 //var url = 'http://127.0.0.1:10032/templates/index.html'
 var url = 'http://www.baidu.com'
 
-var win = nw.Window.open(url, {
+nw.Window.open(url, {
     width: 1300,
     height: 720
 }, function(win) {
     win.showDevTools()
 
     main(win, gui)
-    sys.tray.create(win, gui)
+    sys.tray.create(win, gui, function () {
+        //close event
+        console.log('close window, quit application')
+    })
+
 });
 /*
 exports.init = function() {

@@ -25,3 +25,9 @@ image_scanner_xp  -->  client --> src --> package.json  // package包信息
            |                                       //它在node上下文中运行，可以用它来实现类似后台线程的功能。
            |
            |--> web //前端页面
+
+
+
+//TODO
+任务栏图标：图标需128*128  png 图片，其他无效
+托盘图标：

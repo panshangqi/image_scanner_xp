@@ -10,6 +10,9 @@
     "java": false,
     "page-cache": false
   },
+  "window":{
+    "icon": "res/logo.png"
+  },
   "chromium-args": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
