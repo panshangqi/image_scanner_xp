@@ -1,0 +1,386 @@
+@img _root: /static/imgs;
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.theme_color {
+  background-color: #2D6EDB;
+}
+.theme_empty_btn {
+  background-color: #fff;
+  border: 1px solid #2D6EDB;
+  color: #2D6EDB;
+}
+.theme_empty_btn:hover {
+  background-color: #fff;
+  color: rgba(45, 110, 219, 0.8);
+}
+.theme_yellow_btn {
+  background-color: #FAAD14;
+  border: 1px solid #FAAD14;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.6s;
+}
+.theme_yellow_btn:hover {
+  border: 1px solid #FAAD14;
+  background-color: rgba(250, 173, 20, 0.8);
+  transition: background-color 0.6s;
+}
+@font-face {
+  font-family: "Apple-HeiTi";
+  src: url(.././fonts/NotoSansHans-Regular.ttf);
+}
+html,
+body {
+  font-family: 'Apple-HeiTi';
+}
+.ant-btn:hover {
+  border-color: rgba(45, 110, 219, 0.87);
+  color: rgba(45, 110, 219, 0.87);
+}
+.ant-btn-primary {
+  background-color: #2D6EDB;
+  border-color: #2D6EDB;
+}
+.ant-btn-primary:hover {
+  color: #fff;
+  background-color: rgba(45, 110, 219, 0.87);
+}
+.ant-message-notice-content {
+  box-shadow: 0 0 7px #2D6EDB;
+}
+.ant-layout-sider {
+  background-color: #ffffff;
+}
+.ant-layout-header {
+  background-color: #ffffff;
+}
+.ant-modal-header {
+  padding: 7px 10px 7px 10px;
+  background-color: #2D6EDB;
+}
+.ant-modal-title {
+  color: #fff;
+}
+.ant-modal-close-x:before {
+  height: 20px;
+}
+.ant-modal-close-x {
+  width: 40px;
+  height: 40px;
+  margin-top: -8px;
+  color: #fff;
+}
+.ant-modal-close-x:hover {
+  color: #ff00ff;
+}
+.ant-collapse-content-box {
+  padding: 0;
+}
+.layout_left_right {
+  display: flex;
+  padding: 7px;
+  box-sizing: border-box;
+  background-color: #f1f2f4;
+  flex-flow: row;
+  /*伸缩项目单行排列*/
+  height: 100%;
+  min-height: 680px;
+  align-items: stretch;
+}
+.layout_left_right .layout_left {
+  width: 300px;
+  height: 100%;
+  border: 1px solid #eee;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 7px;
+  box-sizing: border-box;
+}
+.layout_left_right .layout_right {
+  flex: 1;
+  /*这里设置为占比1，填充满剩余空间*/
+  height: 100%;
+  margin-left: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.layout_left_right .layout_right .layout_r_header {
+  border: 1px solid #f1f2f4;
+  height: 45px;
+  background-color: #fff;
+}
+.layout_left_right .layout_right .layout_r_content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 52px;
+  border: 1px solid #f1f2f4;
+  background-color: #fff;
+  overflow: hidden;
+}
+.ReactVirtualized__Grid {
+  outline: none;
+}
+.ReactVirtualized__Table__row {
+  outline: none;
+}
+.theme-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  line-height: 36px;
+  height: 36px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 7px #777;
+  display: none;
+  z-index: 100;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.theme-menu:hover {
+  background-color: #e6f7ff;
+}
+.ant-popover-buttons button {
+  font-size: 12px;
+}
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+  background-color: #F5F5F550;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  background: #fff ;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #8C8C8C;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #969696;
+}
+@img _root: /static/imgs;
+.page_base_html {
+  width: 100%;
+  height: auto;
+  min-height: 700px;
+  overflow: hidden;
+}
+@img _root: /static/imgs;
+.login_html .page_background {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #F0F2F5;
+}
+.login_html .exam_info_and_btn {
+  margin-left: 200px;
+  margin-top: 10px;
+  display: flex;
+}
+.login_html .exam_info_and_btn .scan_btn {
+  margin-left: 20px;
+}
+.login_html .login_box {
+  width: 360px;
+  margin: 100px auto;
+  position: relative;
+}
+.login_html .login_box ._title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.login_html .login_box ._sub_title {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.login_html .login_box .error {
+  font-size: 12px;
+  margin-top: 10px;
+}
+.login_html .to_back {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  z-index: 10;
+}
+.login_html ._drop_username {
+  position: absolute;
+  width: 360px;
+  left: 0;
+  top: 70px;
+}
+.login_html ._drop_username ._drop_icon {
+  position: absolute;
+  right: 2px;
+  top: 0px;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding-left: 12px;
+  padding-top: 16px;
+}
+.login_html ._drop_username ._drop_icon:hover {
+  color: #333;
+}
+._MenuBox {
+  max-height: 200px;
+  overflow-y: auto;
+  opacity: 0.95;
+}
+/*
+.ant-dropdown-menu{
+	max-height: 200px;
+	overflow-y: auto;
+}
+*/
+.user_ul {
+  display: flex;
+  justify-content: space-between;
+}
+.user_ul .delete_user {
+  cursor: pointer;
+}
+.user_ul .delete_user:hover {
+  color: #ff0000;
+}
+@img _root: /static/imgs;
+.page_head {
+  height: 95px;
+  min-width: 1300px;
+  border-bottom: 1px solid #bcbcbc;
+  position: relative;
+  background-color: #2D6EDB;
+  font-family: 'Apple-HeiTi';
+  -webkit-app-region: drag;
+}
+.page_head .app_logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+.page_head .app_logo img {
+  width: 140px;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+.page_head .app_scan_btn {
+  position: absolute;
+  left: 930px;
+  top: 45px;
+  box-sizing: border-box;
+  -webkit-app-region: no-drag;
+}
+.page_head .import_pic_btn {
+  position: absolute;
+  left: 1080px;
+  top: 0px;
+  box-sizing: border-box;
+  -webkit-app-region: no-drag;
+}
+.page_head .app_system_state {
+  position: absolute;
+  left: 180px;
+  top: 6px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 14px;
+  -webkit-app-region: no-drag;
+}
+.page_head .app_version {
+  position: absolute;
+  right: 150px;
+  top: 11px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 14px;
+  -webkit-app-region: no-drag;
+}
+.page_head .app_version a {
+  color: #44D2FF;
+  margin-left: 10px;
+}
+.page_head .app_version a:hover {
+  text-decoration: underline;
+}
+.page_head .app_current_template {
+  position: absolute;
+  left: 730px;
+  top: 7px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 14px;
+  -webkit-app-region: no-drag;
+}
+.page_head .windows_btns {
+  position: absolute;
+  right: 0;
+  top: 3px;
+  padding: 6px;
+  box-sizing: border-box;
+  display: flex;
+  -webkit-app-region: no-drag;
+}
+.page_head .windows_btns .win_btn {
+  margin-left: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.page_head .app_user {
+  position: absolute;
+  right: 140px;
+  top: 11px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'MicrosoftYaHei';
+  -webkit-app-region: no-drag;
+}
+.page_head .app_user a {
+  color: #44D2FF;
+  margin-left: 10px;
+}
+.page_head .app_user a:hover {
+  text-decoration: underline;
+}
+.page_head .app_exam_info {
+  position: absolute;
+  left: 220px;
+  top: 45px;
+  display: flex;
+  -webkit-app-region: no-drag;
+}
+.page_head .app_exam_info .scan_btn {
+  margin-left: 20px;
+}
+.page_head .app_exam_info .import_btn {
+  margin-left: 20px;
+}
+.ant-dropdown-menu {
+  -webkit-app-region: no-drag;
+}
+.ant-dropdown-menu-item {
+  -webkit-app-region: no-drag;
+}
+@img _root: /static/imgs;
+.page_content {
+  position: absolute;
+  width: 100%;
+  top: 96px;
+  left: 0 ;
+  bottom: 0;
+}
+@img _root: /static/imgs;

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>关闭</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="关闭" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(1.000000, 1.000000)" fill="#FFFFFF" id="最小">
+            <rect transform="translate(6.010408, 6.010408) rotate(45.000000) translate(-6.010408, -6.010408) " x="-0.98959236" y="4.51040764" width="14" height="3"></rect>
+            <rect transform="translate(6.010408, 6.010408) rotate(135.000000) translate(-6.010408, -6.010408) " x="-0.98959236" y="4.51040764" width="14" height="3"></rect>
+        </g>
+    </g>
+</svg>

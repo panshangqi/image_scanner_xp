@@ -1,0 +1,89 @@
+.login_html{
+	.page_background{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background-color: #F0F2F5;
+	}
+	.exam_info_and_btn{
+		margin-left: 200px;
+		margin-top: 10px;
+		display: flex;
+		.exam_info{
+
+		}
+		.scan_btn{
+			margin-left: 20px;
+		}
+	}
+	.login_box{
+		width:360px;
+		margin: 100px auto;
+		position: relative;
+		._title{
+			text-align: center;
+			font-size: 30px;
+			font-weight: bold;
+		}
+		._sub_title{
+			text-align: center;
+			font-size: 14px;
+			margin-top: 10px;
+		}
+		.error{
+			font-size: 12px;
+			margin-top: 10px;
+		}
+	}
+	.to_back{
+		position: absolute;
+		left: 30px;
+		top: 20px;
+		z-index: 10;
+	}
+	._drop_username{
+		position: absolute;
+		width:360px;
+		left:0;
+		top: 70px;
+		._drop_icon{
+			position: absolute;
+			right:2px;
+			top:0px;
+			z-index: 100;
+			width: 40px;
+			height:40px;
+			cursor: pointer;
+			box-sizing: border-box;
+			padding-left: 12px;
+			padding-top: 16px;
+			&:hover{
+				color:#333;
+			}
+		}
+	}
+}
+._MenuBox{
+	max-height: 200px;
+	overflow-y: auto;
+	opacity: 0.95;
+}
+/*
+.ant-dropdown-menu{
+	max-height: 200px;
+	overflow-y: auto;
+}
+*/
+.user_ul{
+	display: flex;
+	justify-content: space-between;
+	._name{
+
+	}
+	.delete_user{
+		cursor: pointer;
+		&:hover{
+			color:#ff0000;
+		}
+	}
+}

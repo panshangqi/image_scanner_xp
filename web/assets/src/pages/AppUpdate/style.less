@@ -1,0 +1,55 @@
+._app_update_com{
+	overflow: hidden;
+	height: 100%;
+	font-size: 12px;
+	font-family: "Microsoft YaHei";
+	._header{
+		height: 34px;
+		background-color: @theme_color;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		-webkit-app-region: drag;
+		span{
+			color:#fff;
+			padding-left: 12px;
+		}
+		img{
+			width: 12px;
+			margin-right: 8px;
+			-webkit-app-region: no-drag;
+			cursor: pointer;
+		}
+	}
+	._content{
+		padding:10px 30px 20px 30px;
+		box-sizing: border-box;
+		height:110px;
+		overflow: hidden;
+	}
+	._progress{
+		width:90%;
+		margin: 0 auto;
+		display: none;
+		._tip{
+			text-align: right;
+			._percent{
+				color:@theme_color;
+			}
+			._speed{
+				color:@theme_color;
+			}
+		}
+
+	}
+	._footer{
+		position: absolute;
+		bottom: 10px;
+		width:100%;
+		text-align: center;
+	}
+	.download-success{
+		color:@theme_color;
+		margin-left: 18px;
+	}
+}

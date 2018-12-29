@@ -1,0 +1,123 @@
+
+.page_head{
+	height: 95px;
+	min-width: 1300px;
+	border-bottom: 1px solid #bcbcbc;
+	position: relative;
+	background-color: @theme_color;
+	font-family: 'Apple-HeiTi';
+	-webkit-app-region: drag;
+	.app_logo{
+		position: absolute;
+		left: 0;
+		top:0;
+		box-sizing: border-box;
+		img{
+			width:140px;
+			margin-top: 0px;
+			margin-left: 25px;
+		}
+	}
+	.app_scan_btn{
+		position: absolute;
+		left: 930px;
+		top: 45px;
+		box-sizing: border-box;
+		-webkit-app-region: no-drag;
+	}
+	.import_pic_btn{
+		position: absolute;
+		left: 1080px;
+		top: 0px;
+		box-sizing: border-box;
+		-webkit-app-region: no-drag;
+	}
+	.app_system_state{
+		position: absolute;
+		left: 180px;
+		top:6px;
+		box-sizing: border-box;
+		color:#fff;
+		font-size: 14px;
+		-webkit-app-region: no-drag;
+	}
+	.app_version{
+		position: absolute;
+		right: 150px;
+		top:11px;
+		box-sizing: border-box;
+		color:#fff;
+		font-size: 14px;
+		-webkit-app-region: no-drag;
+		a{
+			color:#44D2FF;
+			margin-left: 10px;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+	.app_current_template{
+		position: absolute;
+		left: 730px;
+		top:7px;
+		box-sizing: border-box;
+		color:#fff;
+		font-size: 14px;
+		-webkit-app-region: no-drag;
+	}
+	.windows_btns{
+		position: absolute;
+		right: 0;
+		top:3px;
+		padding: 6px;
+		box-sizing: border-box;
+		display: flex;
+		-webkit-app-region: no-drag;
+		.win_btn{
+			margin-left: 5px;
+			margin-right: 10px;
+			cursor: pointer;
+		}
+	}
+	.app_user{
+		position: absolute;
+		right: 140px;
+		top:11px;
+		box-sizing: border-box;
+		color:#fff;
+		font-size: 14px;
+		font-family: 'MicrosoftYaHei';
+		-webkit-app-region: no-drag;
+		a{
+			color:#44D2FF;
+			margin-left: 10px;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.app_exam_info{
+		position: absolute;
+		left:220px;
+		top:45px;
+		display: flex;
+		-webkit-app-region: no-drag;
+		.exam_info{
+
+		}
+		.scan_btn{
+			margin-left: 20px;
+		}
+		.import_btn{
+			margin-left: 20px;
+		}
+	}
+}
+.ant-dropdown-menu{
+	-webkit-app-region: no-drag;
+}
+.ant-dropdown-menu-item{
+	-webkit-app-region: no-drag;
+}

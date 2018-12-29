@@ -1,0 +1,79 @@
+@img _root: /static/imgs;
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+::-webkit-scrollbar {
+  width: 11px;
+  height: 4px;
+  background-color: #F5F5F550;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  background: #fff ;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(200, 200, 200, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c8c8c8;
+}
+@img _root: /static/imgs;
+._app_update_com {
+  overflow: hidden;
+  height: 100%;
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+}
+._app_update_com ._header {
+  height: 34px;
+  background-color: #2D6EDB;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-app-region: drag;
+}
+._app_update_com ._header span {
+  color: #fff;
+  padding-left: 12px;
+}
+._app_update_com ._header img {
+  width: 12px;
+  margin-right: 8px;
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+._app_update_com ._content {
+  padding: 10px 30px 20px 30px;
+  box-sizing: border-box;
+  height: 110px;
+  overflow: hidden;
+}
+._app_update_com ._progress {
+  width: 90%;
+  margin: 0 auto;
+  display: none;
+}
+._app_update_com ._progress ._tip {
+  text-align: right;
+}
+._app_update_com ._progress ._tip ._percent {
+  color: #2D6EDB;
+}
+._app_update_com ._progress ._tip ._speed {
+  color: #2D6EDB;
+}
+._app_update_com ._footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+._app_update_com .download-success {
+  color: #2D6EDB;
+  margin-left: 18px;
+}

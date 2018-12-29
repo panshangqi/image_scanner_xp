@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": ".\\nwjs-sdk-v0.14.7-win-ia32\\nw.exe src --enable-logging --v=0 --user-data-dir=%APPDATA%\\image_scanner_xp",
+    "start": "set NODE_ENV=development&& .\\nwjs-sdk-v0.14.7-win-ia32\\nw.exe src --enable-logging --v=0 --user-data-dir=%APPDATA%\\image_scanner_xp",
     "prod": "node ./script/build.js ia32",
     "prod_x64": "node ./script/build.js x64",
     "build": "nwbuild --platforms win32 --version 0.14.7 --name image_scanner --winIco src/res/logo.ico src/ ",
@@ -21,7 +21,9 @@
     "url": "https://github.com/panshangqi/image_scanner_xp/issues"
   },
   "homepage": "https://github.com/panshangqi/image_scanner_xp#readme",
-  "dependencies": {},
+  "dependencies": {
+    "nodejs-websocket": "^1.7.2"
+  },
   "devDependencies": {
     "async": "^2.6.1",
     "nw-builder": "^3.5.4",

@@ -1,0 +1,53 @@
+@import "../style/vars";
+
+@pg-prefix-cls: ~"@{yq-prefix}-pagination";
+@pg-btn-prefix-cls: ~"@{yq-prefix}-pg-btn";
+@border: 1px @green solid;
+.@{pg-prefix-cls} {
+    display: inline-block;
+    font-size: 15px;
+    &.simple {
+        .@{pg-btn-prefix-cls} {
+            padding: 7px 5px;
+        }
+    }
+    .@{pg-btn-prefix-cls} {
+        border: @border;
+        border-radius: @border-radius;
+        background-color: @green;
+        text-align: center;
+        min-width: 25px;
+        padding: 3px 5px;
+        margin: 0px 5px;
+        color: @fff;
+        font-weight: 200;
+        display: inline-block;
+        cursor: pointer;
+        &.active {
+            background-color: rgba(0,0,0,0);
+            color: @green;
+        }
+        &.disabled {
+            background-color: @gray-3;
+            border: 1px;
+            cursor: not-allowed;
+            &:hover {opacity: 1;}
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    span {
+        color: @green;
+    }
+    input {
+        outline: none;
+        border: 1px @green solid;
+        border-radius: @border-radius;
+        width: 60px;
+        padding: 4px 5px;
+        font-size: 15px;
+        margin-left: 5px;
+        text-align: center;
+    }
+}

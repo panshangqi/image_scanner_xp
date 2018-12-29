@@ -1,0 +1,107 @@
+.page {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: space-between;
+  .table_box {
+    width: 278px;
+    padding: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 0 2px 0 rgba(10, 31, 68, 0.08);
+    border-radius: 2px;
+    font-size: 13px;
+    margin: 7px;
+    .btn_div {
+      width: 100%;
+      display: block;
+      margin-top: 5px;
+      padding-top: 10px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
+    .table_title {
+      width: 100%;
+      font-weight: bold;
+      color: #000;
+      padding: 5px 5px 10px 0px;
+      box-sizing: border-box;
+    }
+    .student_table {
+      width: 100%;
+      margin-top: 10px;
+      thead {
+        height: 26px;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        tr {
+          height: 26px;
+          td {
+            width: 33%;
+            color: #111;
+            font-weight: bold;
+            text-align: center;
+          }
+        }
+      }
+      tbody {
+        tr {
+          height: 26px;
+          cursor: pointer;
+          td {
+            width: 33%;
+            height: 26px;
+            font-weight: bold;
+            text-align: center;
+          }
+        }
+      }
+      .clicked_row {
+        background-color: fadeout(#2D6EDB, 85%);
+      }
+    }
+
+  }
+  .pic_box {
+    vertical-align: top;
+    background: #FFFFFF;
+    box-shadow: 0 0 2px 0 rgba(10, 31, 68, 0.08);
+    margin: 7px 0 7px 0;
+  }
+  .item_box {
+    width: 278px;
+    padding: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 0 2px 0 rgba(10, 31, 68, 0.08);
+    border-radius: 2px;
+    font-size: 13px;
+    vertical-align: top;
+    margin: 7px;
+    .table_title {
+      width: 100%;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+      color: #000;
+      padding: 5px 5px 15px 0;
+      box-sizing: border-box;
+    }
+    .btn_div {
+      text-align: center;
+    }
+  }
+  .row_stu{
+    height:24px;
+    width:250px;
+    line-height: 24px;
+    cursor: pointer;
+    span{
+      display: inline-block;
+      text-align: center;
+    }
+  }
+}
+
+.error_radio{
+  display: inline-block;
+  margin-left: 100px;
+  width: 100px;
+}

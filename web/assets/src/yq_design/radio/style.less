@@ -1,0 +1,47 @@
+@import "../style/vars";
+
+@radio-prefix-cls: ~"@{yq-prefix}-radio";
+@border: 1px @gray-3 solid;
+.@{radio-prefix-cls} {
+    line-height: 1em;
+    display: inline-block;
+    cursor: pointer;
+    .yq-radio-btn::before {
+        content: "\a0";
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px;
+        width: .5em;
+        height: .5em;
+        margin-right: .3em;
+        border-radius: 50%;
+        border: 1px @green solid;
+        text-indent: .15em;
+        line-height: 1; 
+        background-clip: content-box;
+        padding: .15em;
+        margin-bottom: .1em;
+    }
+    &:hover .yq-radio-btn::before{
+        box-shadow: 0px 0px 1px 1px @green;
+    }
+    input[type="radio"] {
+        display: none;
+    }
+    input[type="radio"]:checked + .yq-radio-btn{
+        &::before {
+            background-color: @green;
+        }
+    }
+    &.disabled {
+        cursor: not-allowed;
+        color: @gray-2;
+        .yq-radio-btn::before {
+            border: 1px @gray-3 solid;
+            background-color: @gray-3;
+        }
+        &:hover .yq-radio-btn::before{
+            box-shadow: 0px 0px 0px 0px;
+        }
+    }
+}

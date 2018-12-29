@@ -1,0 +1,46 @@
+._pic_ani{
+	padding: 5px;
+	.picture_center{
+		margin: 0 auto;
+		text-align: center;
+		position: relative;
+		box-sizing: border-box;
+		overflow: hidden;
+		height: 510px;
+		border:1px solid @theme_color;
+		background-image: url(../../imgs/scan_bg.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		.picture_box{
+			display: inline-block;
+			height: 560px;
+			overflow-y: hidden;
+			position: relative;
+			.main_pic{
+				width:900px;
+			}
+			.next_pic{
+				width:900px;
+				position: absolute;
+				left: -900px;
+				top:0;
+				z-index: 8;
+			}
+		}
+		.layer_image{
+			position: absolute;
+			opacity:0.5;
+			left:0;
+			top:0;
+			display: none;
+			z-index: 10;
+		}
+	}
+	.init_picture_tip{
+		position: absolute;
+		text-align: center;
+		top:49%;
+		left: 50%;
+		margin-left: -150px;
+	}
+}

@@ -4,7 +4,9 @@ client/node_modules/
 client/src/node_modules/
 client/nwjs-sdk-v0.14.7-win-ia32/
 
+client/image_scanner_xp.exe
+web/node_modules/
 
-
+web/vector/
 
 

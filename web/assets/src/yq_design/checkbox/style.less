@@ -1,0 +1,46 @@
+@import "../style/vars";
+
+@checkbox-prefix-cls: ~"@{yq-prefix}-checkbox";
+@border: 1px @gray-3 solid;
+.@{checkbox-prefix-cls} {
+    line-height: 1em;
+    display: inline-block;
+    cursor: pointer;
+    .yq-checkbox-btn::before {
+        content: "\a0";
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px;
+        width: .5em;
+        height: .5em;
+        margin-right: .3em;
+        border: 1px @green solid;
+        text-indent: .15em;
+        line-height: 1; 
+        background-clip: content-box;
+        padding: .15em;
+        margin-bottom: .1em;
+    }
+    &:hover .yq-checkbox-btn::before{
+        box-shadow: 0px 0px 1px 1px @green;
+    }
+    input[type="checkbox"] {
+        display: none;
+    }
+    input[type="checkbox"]:checked + .yq-checkbox-btn{
+        &::before {
+            background-color: @green;
+        }
+    }
+    &.disabled {
+        cursor: not-allowed;
+        color: @gray-2;
+        .yq-checkbox-btn::before {
+            border: 1px @gray-3 solid;
+            background-color: @gray-3;
+        }
+        &:hover .yq-checkbox-btn::before{
+            box-shadow: 0px 0px 0px 0px;
+        }
+    }
+}

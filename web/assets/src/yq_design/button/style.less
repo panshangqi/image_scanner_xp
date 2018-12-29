@@ -1,0 +1,97 @@
+@import "../style/vars";
+
+@btn-prefix-cls: ~"@{yq-prefix}-btn";
+
+// Button styles
+// -----------------------------
+.@{btn-prefix-cls} {
+    position: relative;
+    display: inline-block;
+    background-image: none;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    white-space: nowrap;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
+    transition: all .3s @ease-in-out;
+    .button-size(@btn-height-base; @padding-x-md; @font-size-base);
+    .button-color(@gray; @fff; @gray-3);
+    &:focus {
+        outline: none;
+        text-decoration: none;
+    }
+    &:hover {
+        text-decoration: none;
+        .button-color(@gray; lighten(@gray-3, 8%); @gray-3);
+    }
+    > .yq-icon + span,
+    > span + .yq-icon {
+        margin-left: 8px;
+    }
+    &-primary {
+        .button-color(@fff; @green; @green);
+        &.yq-btn-streak{
+            color: @green;
+        }
+        &:hover{
+            .button-color(@fff; lighten(@green, 8%); lighten(@green, 8%));
+        }
+    }
+    &-streak {
+        background-color: @fff;
+    }
+    &-lg {
+        .button-size(@btn-height-lg; @padding-x-lg; @font-size-lg);
+    }
+    &-sm {
+        .button-size(@btn-height-sm; @padding-x-sm; @font-size-sm );
+    }
+    &:disabled {
+        .button-color(@gray-2; @gray-4; @gray-4);
+        cursor: not-allowed;
+    }
+    &-clicked:after {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        bottom: -1px;
+        right: -1px;
+        border-radius: inherit;
+        border: 0 solid @primary-color;
+        opacity: 0.4;
+        animation: buttonEffect .4s;
+        display: block;
+    }
+}
+
+
+@keyframes buttonEffect {
+  to {
+    opacity: 0;
+    top: -6px;
+    left: -6px;
+    bottom: -6px;
+    right: -6px;
+    border-width: 4px;
+  }
+}
+
+//mixin
+.button-size(@height; @padding; @font-size) {
+    padding: 0 @padding - 2px;
+    font-size: @font-size;
+    border-radius: @border-radius;
+    height: @height;
+    line-height: @height;
+}
+
+.button-color(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+}

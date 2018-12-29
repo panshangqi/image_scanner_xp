@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>旋转90度</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="界面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="9.2.1.2人工匹配-二次识别结果--copy" transform="translate(-978.000000, -208.000000)">
+            <g id="9.2.1.2人工匹配-二次识别结果-" transform="translate(195.000000, 151.000000)">
+                <g id="旋转90度" transform="translate(782.000000, 57.000000)">
+                    <g id="旋转" stroke-linecap="round" transform="translate(9.500000, 9.000000) scale(-1, 1) translate(-9.500000, -9.000000) " stroke="#2D6EDB">
+                        <path d="M17.5,9 C17.5,4.30557963 13.6944204,0.5 9,0.5 C4.30557963,0.5 0.5,4.30557963 0.5,9 C0.5,13.6944204 4.30557963,17.5 9,17.5 C12.4032063,17.5 15.3392839,15.4999842 16.6969708,12.6112147" id="Oval-12"></path>
+                        <path d="M17.5,9 L17.5,2" id="Path-13" stroke-linejoin="round"></path>
+                    </g>
+                    <g id="90°" transform="translate(5.000000, 4.000000)" fill="#2D6EDB" font-family="PingFangSC-Medium, PingFang SC" font-size="7" font-weight="400">
+                        <text>
+                            <tspan x="0.69995117" y="7.5">90°</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

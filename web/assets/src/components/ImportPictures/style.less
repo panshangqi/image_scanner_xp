@@ -1,0 +1,46 @@
+#import_pictures_dialog{
+	line-height: 25px;
+	.import_pic_table{
+		tr{
+			height: 50px;
+		}
+		.free_space{
+			display: inline-block;
+			width: 80px;
+		}
+		.space_tip{
+			display: inline-block;
+			color: red;
+		}
+	}
+	.button_ops{
+		position: relative;
+		text-align: center;
+		margin-top: 15px;
+		.skip_the_page{
+			position: absolute;
+			right: 20px;
+			top:3px;
+		}
+	}
+	.progress_title{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+#import_pictures_button{
+	.importBtnStyle{
+		width: 120px;
+		height: 38px;
+		background-color: #578be2;
+		border: 0;
+		border-radius: 4px;
+		color:#fff;
+		cursor: pointer;
+		outline:none;
+		&:active{
+			background-color: #3e7ee7;
+			transition: background-color 0.3s;
+		}
+	}
+}

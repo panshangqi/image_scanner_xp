@@ -1,0 +1,49 @@
+._dialog_content{
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  ._line_info{
+    margin-left: 50px;
+    width: 100%;
+    height: 30px;
+    ._info_label{
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+      margin-left: 26px;
+    }
+    ._info_span{
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+      overflow: hidden;
+      width: 246px;
+      text-overflow: ellipsis;
+      white-space: nowrap; //文本不换行，这样超出一行的部分被截取，显示...
+      a{
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    p{
+      font-size: 13px;
+      margin-top: 14px;
+    }
+  }
+  ._company_info{
+    height: 32px;
+    line-height: 32px;
+  }
+  ._op_btn_box{
+    text-align: center;
+    width: 120px;
+    height: 35px;
+    margin-top: 12px;
+  }
+  .logo_pic{
+    position: absolute;
+    width:60px;
+    left: 30px;
+  }
+}

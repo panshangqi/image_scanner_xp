@@ -1,0 +1,213 @@
+@import "../style/vars";
+@import "../style/core/motion.less";
+@import "../icon/style.less";
+
+@dialog-prefix-cls: ~"@{yq-prefix}-modal";
+
+.@{dialog-prefix-cls} {
+  .reset-component;
+  position: relative;
+  width: auto;
+  margin: 0 auto;
+  top: 100px;
+  padding-bottom: 24px;
+
+  &-wrap {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @zindex-modal;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+  }
+
+  &-title {
+    margin: 0;
+    font-size: @font-size-lg;
+    line-height: 22px;
+    color: @fff;
+  }
+
+  &-content {
+    position: relative;
+    background-color: @component-background;
+    border: 0;
+    border-radius: @border-radius;
+    background-clip: padding-box;
+  }
+
+  &-close {
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    transition: color .3s;
+    outline: 0;
+    padding: 0;
+
+    &-x {
+      display: block;
+      font-style: normal;
+      vertical-align: baseline;
+      text-align: center;
+      text-transform: none;
+      text-rendering: auto;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: @font-size-lg;
+      color: @fff;
+
+      &:before {
+        content: "\e633";
+        display: block;
+        font-family: "anticon" !important;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      color: #444;
+      text-decoration: none;
+    }
+  }
+
+  &-header {
+    padding: 8px 24px;
+    border-radius: @border-radius @border-radius 0 0;
+    background: @component-header-background;
+    color: @fff;
+    border-bottom: @border-width-base @border-style-base @border-color-split;
+  }
+
+  &-body {
+    padding: 24px;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+    word-wrap: break-word;
+    background-color: @gray-5;
+  }
+
+  &-footer {
+    padding: 10px 16px 30px;
+    text-align: center;
+    border-radius: 0 0 @border-radius @border-radius;
+    background-color: @gray-5;
+    button {
+      margin: 0 15px;
+    }
+  }
+
+  &.zoom-enter,
+  &.zoom-appear {
+    animation-duration: @animation-duration-slow;
+    transform: none; // reset scale avoid mousePosition bug
+    opacity: 0;
+  }
+
+  &-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #373737;
+    background-color: @modal-mask-bg; // lesshint duplicateProperty: false
+    height: 100%;
+    z-index: @zindex-modal-mask;
+    filter: ~"alpha(opacity=50)";
+
+    &-hidden {
+      display: none;
+    }
+  }
+
+  &-open {
+    overflow: hidden;
+  }
+}
+
+
+@confirm-prefix-cls: ~"@{yq-prefix}-confirm";
+@iconfont-css-prefix: ~"@{yq-prefix}-icon";
+
+.@{confirm-prefix-cls} {
+  .@{yq-prefix}-modal-header {
+    display: none;
+  }
+
+  .@{yq-prefix}-modal-close {
+    display: none;
+  }
+
+  .@{yq-prefix}-modal-body {
+    padding: 32px 32px 24px;
+  }
+
+  &-body-wrapper {
+    .clearfix();
+  }
+
+  &-body {
+    .@{confirm-prefix-cls}-title {
+      color: @heading-color;
+      font-weight: 500;
+      font-size: @font-size-lg;
+      line-height: 22px;
+      display: block;
+      // create BFC to avoid
+      // https://user-images.githubusercontent.com/507615/37702510-ba844e06-2d2d-11e8-9b67-8e19be57f445.png
+      overflow: auto;
+    }
+
+    .@{confirm-prefix-cls}-content {
+      margin-left: 38px;
+      font-size: @font-size-base;
+      color: @gray;
+      margin-top: 8px;
+    }
+
+    > .@{iconfont-css-prefix} {
+      font-size: 22px;
+      margin-right: 16px;
+      float: left;
+    }
+  }
+
+  .@{confirm-prefix-cls}-btns {
+    margin-top: 24px;
+    float: right;
+
+    button + button {
+      margin-left: 8px;
+      margin-bottom: 0;
+    }
+  }
+
+  &-error &-body > .@{iconfont-css-prefix} {
+    color: @error-color;
+  }
+
+  &-warning &-body > .@{iconfont-css-prefix},
+  &-confirm &-body > .@{iconfont-css-prefix} {
+    color: @warning-color;
+  }
+
+  &-info &-body > .@{iconfont-css-prefix} {
+    color: @info-color;
+  }
+
+  &-success &-body > .@{iconfont-css-prefix} {
+    color: @success-color;
+  }
+}
+

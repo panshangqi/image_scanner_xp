@@ -31,3 +31,19 @@ image_scanner_xp  -->  client --> src --> package.json  // package包信息
 //TODO
 任务栏图标：图标需128*128  png 图片，其他无效
 托盘图标：
+
+asyncawait: node5无法使用内置的async,await 需npm install asyncawait
+如果报错，查找node_modules 下面的fibers/fibers.js,修改modulePath 的路径
+
+//安装node-webkit 对应的sliqte3
+npm install sqlite3 --build-from-source --runtime=node-webkit --target_arch=ia32 --target=0.14.7
+
+
+2. 32:  nw-gyp rebuild --arch=ia32 --target=0.14.7 --arch=ia32  --dist-url=https://github.com/rogerwang/nw-gyp
+        node build.js 32
+
+    64:  nw-gyp rebuild --arch=x64 --target=0.14.7 --arch=x64
+            node build.js 64
+
+
+Sequelize : ES2015 Node 5.12.0 对应的版本 3.20.0

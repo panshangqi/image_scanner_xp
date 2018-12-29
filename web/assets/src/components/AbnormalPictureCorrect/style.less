@@ -1,0 +1,143 @@
+._picture_correct_com{
+	min-width:700px;
+	display:flex;
+	flex-direction:column;
+	height: 100%;
+	._picture_title{
+		height: 50px;
+		background-color: #fff;
+		border-bottom: 1px solid #ddd;
+		position: relative;
+		i{
+			margin-top: 12px;
+			margin-left: 30px;
+			cursor: pointer;
+		}
+		.show_tip{
+			line-height: 50px;
+			margin-left: 25px;
+		}
+		.op_btns{
+			position: absolute;
+			right: 25px;
+			top:15px;
+			img{
+				margin-left: 20px;
+				cursor: pointer;
+			}
+		}
+
+	}
+	._picture_box{
+		width:100%;
+		flex:1;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	._picture_show{
+		width:690px;
+		height: 100%;
+		margin: 0 auto;
+		overflow: auto;
+		text-align: center;
+		background-color: #f8f9fc;
+		position: relative;
+		.pic_image{
+			position: absolute;
+			left: 0;
+			top:0;
+			width:670px;
+		}
+		.pic_grid{
+			width:670px;
+			height:100%;
+			position: absolute;
+			margin-left:0;
+			margin-top:0;
+			background-image: url(../../imgs/exam_grid.svg);
+			background-size: 1200px;
+			background-repeat: repeat;
+		}
+		.pic_layer{
+			width:670px;
+			height: auto;
+		}
+	}
+	._picture_list{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #cdcdcd;
+		border-top: 1px solid #cdcdcd;
+		background-color: #fff;
+		height: 125px;
+		.single_pic_box{
+			width: 120px;
+			height: 72px;
+			overflow: hidden;
+			cursor: pointer;
+			border: 2px solid #ccc;
+			margin-left: 15px;
+			text-align: center;
+			img{
+				width:90px;
+			}
+		}
+	}
+}
+.tp_recognition_cover{
+	.corner, .byline{
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        background-color: #FBA478;
+        z-index: 10;
+    }
+    .lt{
+        left: -6px;
+        top: -6px;
+        cursor: nw-resize;
+    }
+    .lb{
+        left: -6px;
+        bottom: -6px;
+        cursor: sw-resize;
+    }
+    .rt{
+        right: -6px;
+        top: -6px;
+        cursor: ne-resize;
+    }
+    .rb{
+        right: -6px;
+        bottom: -6px;
+        cursor: se-resize;
+    }
+    .l{
+        left: -6px;
+        top: 50%;
+        margin-top: -3px;
+        cursor: w-resize;
+    }
+    .t{
+        left: 50%;
+        top: -6px;
+        margin-left: -3px;
+        cursor: n-resize;
+    }
+    .r{
+        right: -6px;
+        top: 50%;
+        margin-top: -3px;
+        cursor: e-resize;
+    }
+    .b{
+        left: 50%;
+        bottom: -6px;
+        margin-left: -3px;
+        cursor: s-resize;
+    }
+}

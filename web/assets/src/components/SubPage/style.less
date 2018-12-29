@@ -1,0 +1,56 @@
+.sub_page{
+    overflow: hidden;
+    height: 100%;
+    background-color: #F1F2F4;
+    .sub_page_header{
+        position: fixed;
+        height: 36px;
+        width: 100%;
+        border-bottom: 1px solid #bcbcbc;
+        background-color: @theme_color;
+        font-family: 'Apple-HeiTi';
+        z-index: 30;
+        -webkit-app-region: drag;
+        .logo{
+            position: absolute;
+            left: 14px;
+            top: 8px;
+            box-sizing: border-box;
+            img{
+                width:14px;
+                margin-right: 10px;
+            }
+            .title{
+                font-size: 13px;
+                color: #fff;
+            }
+        }
+        .mini{
+            position: absolute;
+            right: 44px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            background-position: center;
+            cursor: pointer;
+            -webkit-app-region: no-drag;
+        }
+        .close{
+            position: absolute;
+            right: 14px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            background-position: center;
+            cursor: pointer;
+            -webkit-app-region: no-drag;
+        }
+
+    }
+    .sub_page_content{
+        padding: 5px;
+        margin-top: 36px;
+        width: 100%;
+        background-color: #f0f2f5;
+    }
+}

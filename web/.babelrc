@@ -1,0 +1,13 @@
+{
+    "presets": [
+        "react",
+        ["env",{
+              "modules": false		//做tree Shaking
+        }],
+        "stage-0"
+    ],
+    "plugins": [
+        "syntax-dynamic-import",
+        "transform-runtime"
+    ]
+}

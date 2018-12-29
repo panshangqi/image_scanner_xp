@@ -1,0 +1,31 @@
+@import "../style/vars";
+
+@input-prefix-cls: ~"@{yq-prefix}-input";
+@border: 1px @gray-3 solid;
+
+.@{input-prefix-cls} {
+    border: @border;
+    border-radius: @border-radius;
+    max-width: 100%;
+    width: 300px;
+    height: 30px;
+    padding: 0px 10px;
+    outline:none;
+    caret-color: @green;
+    &.lg {
+        width: 400;
+        height: 40px;
+    }
+    &.sm {
+        width: 200px;
+        height: 20px;
+    }
+    &:hover, &:focus {
+        border: 1px @green solid;
+    }
+    &:disabled {
+        border: @border;
+        cursor: not-allowed;
+        background-color: @gray-5;
+    }
+}

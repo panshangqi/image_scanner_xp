@@ -1,0 +1,63 @@
+@import "../style/vars";
+
+@icon-url  : './font/iconfont';
+
+@font-face {
+    font-family: 'anticon';
+    src: url('@{icon-url}.eot'); /* IE9*/
+    src:
+    /* chrome、firefox */
+    url('@{icon-url}.woff') format('woff'),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('@{icon-url}.ttf') format('truetype'),
+    /* iOS 4.1- */
+    url('@{icon-url}.svg#iconfont') format('svg');
+}
+
+.yq-icon {
+    .iconfont-mixin();
+    &-spin:before {
+        display: inline-block;
+        animation: loadingCircle 1s infinite linear;
+    }
+    &-loading:before { content: "\e64d"; }
+    &-download:before { content: "\e6b7"; }
+    &-left:before { content: "\E620"; }
+    &-right:before { content: "\E61F"; }
+    &-info-circle:before {content: "\E628"; }
+    &-check-circle:before {content: "\E630"; }
+    &-close-circle:before {content: "\E62E"; }
+    &-exclamation-circle:before {content: "\E62C"; }
+    &-question-circle:before {content: "\E63B"; }
+    &-caret-up:before {content: "\E607"; }
+    &-caret-down:before {content: "\E606"; }
+}
+
+@keyframes loadingCircle {
+  0% {
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin: 50% 50%;
+    transform: rotate(360deg);
+  }
+}
+
+
+//mixin
+.iconfont-mixin() {
+  display: inline-block;
+  font-style: normal;
+  vertical-align: baseline;
+  text-align: center;
+  text-transform: none;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:before {
+    display: block;
+    font-family: "anticon" !important;
+  }
+}
